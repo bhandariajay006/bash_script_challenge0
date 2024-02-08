@@ -1,37 +1,37 @@
-#Challenge User Account Management
+#Challenge: User Account Management
+In this challenge, you will create a bash script that provides options for managing user accounts on the system. The script should allow users to perform various user account-related tasks based on command-line arguments.
 
-User Account Management Bash Script for System Administration
+Part 1: Account Creation
+Implement an option -c or --create that allows the script to create a new user account. The script should prompt the user to enter the new username and password.
 
-Description:
+Ensure that the script checks whether the username is available before creating the account. If the username already exists, display an appropriate message and exit gracefully.
 
-Our User Account Management Bash Script provides a comprehensive solution for managing user accounts on Linux systems. As a DevOps engineer, ensuring efficient user account management is crucial for maintaining system security and accessibility. This script offers a range of functionalities to streamline account creation, deletion, password reset, and account listing, all accessible via command-line arguments.
+After creating the account, display a success message with the newly created username.
 
-Key Features:
+Part 2: Account Deletion
+Implement an option -d or --delete that allows the script to delete an existing user account. The script should prompt the user to enter the username of the account to be deleted.
 
-1.Account Creation (-c or --create):
+Ensure that the script checks whether the username exists before attempting to delete the account. If the username does not exist, display an appropriate message and exit gracefully.
 
-Users can create new accounts by providing a desired username and password.
-The script ensures the availability of the chosen username before proceeding with account creation.
-Upon successful creation, users receive a confirmation message with the newly created username.
-Account Deletion (-d or --delete):
+After successfully deleting the account, display a confirmation message with the deleted username.
 
-2.Existing user accounts can be deleted by specifying the username to be removed.
-Prior to deletion, the script verifies the existence of the specified username.
-Upon successful deletion, users receive a confirmation message indicating the removal of the specified account.
-Password Reset (-r or --reset):
+Part 3: Password Reset
+Implement an option -r or --reset that allows the script to reset the password of an existing user account. The script should prompt the user to enter the username and the new password.
 
-3.Users can reset passwords for existing accounts by entering the username and the new password.
-The script validates the existence of the provided username before resetting the password.
-Upon successful password reset, users are notified of the update along with the username.
-List User Accounts (-l or --list):
+Ensure that the script checks whether the username exists before attempting to reset the password. If the username does not exist, display an appropriate message and exit gracefully.
 
-This option allows users to retrieve a list of all user accounts present on the system.
-Detailed information, including usernames, user IDs (UIDs), home directories, and shell types, is displayed for each account.
-Help and Usage Information (-h or --help):
+After resetting the password, display a success message with the username and the updated password.
 
-Users can access usage information and a summary of available command-line options by invoking the help option.
-This feature enhances user experience by providing guidance on script usage and available functionalities.
-Additional Considerations:
+Part 4: List User Accounts
+Implement an option -l or --list that allows the script to list all user accounts on the system. The script should display the usernames and their corresponding user IDs (UID).
+Part 5: Help and Usage Information
+Implement an option -h or --help that displays usage information and the available command-line options for the script.
+Bonus Points (Optional)
+If you want to challenge yourself further, you can add additional features to the script, such as:
+
+Displaying more detailed information about user accounts (e.g., home directory, shell, etc.).
+Allowing the modification of user account properties (e.g., username, user ID, etc.).
+Remember to handle errors gracefully, provide appropriate user prompts, and add comments to explain the logic and purpose of each part of the script.
 
 Error handling: The script incorporates error handling to gracefully manage scenarios such as invalid input or non-existent user accounts.
 Security: By leveraging sudo privileges, the script ensures that user account management operations are performed securely and with appropriate permissions.
